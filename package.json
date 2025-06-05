@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://jaymieblaze.github.io/my-spot-app",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
