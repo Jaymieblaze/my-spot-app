@@ -424,6 +424,16 @@ main {
   z-index: 1000;
 }
 
+#postDialog label {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+#postDialog input:first-of-type {
+  color: #333;
+}
+
 .image-container {
   position: relative;
 }
