@@ -37,7 +37,7 @@ function UserProfile({ profileData, onEditProfileClick, onNewPostClick }) {
         className="button_large"
         type="button"
         id="newPostButton"
-        onClick={onNewPostClick} // React event handler
+        onClick={onNewPostClick} 
       >
         <i className="ri-add-line"></i> New Post
       </button>

@@ -8,9 +8,12 @@ import NewPostDialog from './components/NewPostDialog';
 import ImageModalViewer from './components/ImageModalViewer';
 import Footer from './components/Footer';
 
+//import static profile image
+import dummyProfileImage from './assets/image-2.png'
+
 // Dummy initial profile data (will be managed by state)
 const initialProfileData = {
-  imageUrl: '/src/assets/image-2.png', 
+  imageUrl: dummyProfileImage, 
   title: 'Aliauna Damala Bouga Time Bongo Puru Nacka Lu Lu Lu Badara Akon',
   description: 'Known mononymously as Akon (/ˈeɪkɒn/), is a Senegalese-American singer, record producer, and entrepreneur. An influential figure in modern world...',
 };
