@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import Header from './components/Header';
-
+import UserProfile from './components/UserProfile';
+import PostSection from './components/PostSection';
+import EditProfileModal from './components/EditProfileModal';
+import NewPostDialog from './components/NewPostDialog';
+import ImageModalViewer from './components/ImageModalViewer';
+import Footer from './components/Footer';
 
 // Dummy initial profile data (will be managed by state)
 const initialProfileData = {
-  imageUrl: './images/image 2.png',
+  imageUrl: '/src/assets/image-2.png', 
   title: 'Aliauna Damala Bouga Time Bongo Puru Nacka Lu Lu Lu Badara Akon',
   description: 'Known mononymously as Akon (/ˈeɪkɒn/), is a Senegalese-American singer, record producer, and entrepreneur. An influential figure in modern world...',
 };
@@ -102,42 +107,9 @@ function App() {
           />
         </main>
         <Footer />
-      <Header />
-      <div className="main-container">
-        <main>
-          <UserProfile
-            profileData={profileData}
-            onEditProfileClick={() => setIsEditProfileModalOpen(true)}
-            onNewPostClick={() => setIsNewPostDialogOpen(true)}
-          />
-          <PostSection
-            posts={posts}
-            onDeletePost={handleDeletePost}
-            onImageClick={handleOpenImageModal}
-          />
-          <EditProfileModal
-            isOpen={isEditProfileModalOpen}
-            onClose={() => setIsEditProfileModalOpen(false)}
-            profileData={profileData}
-            onSave={handleProfileUpdate}
-          />
-          <NewPostDialog
-            isOpen={isNewPostDialogOpen}
-            onClose={() => setIsNewPostDialogOpen(false)}
-            onAddPost={handleAddPost}
-          />
-          <ImageModalViewer
-            isOpen={isImageModalViewerOpen}
-            onClose={handleCloseImageModal}
-            image={selectedImage}
-          />
-        </main>
-        <Footer />
       </div>
     </>
   );
-  );
 }
 
-export default App;
 export default App;
