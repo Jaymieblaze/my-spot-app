@@ -102,9 +102,42 @@ function App() {
           />
         </main>
         <Footer />
+      <Header />
+      <div className="main-container">
+        <main>
+          <UserProfile
+            profileData={profileData}
+            onEditProfileClick={() => setIsEditProfileModalOpen(true)}
+            onNewPostClick={() => setIsNewPostDialogOpen(true)}
+          />
+          <PostSection
+            posts={posts}
+            onDeletePost={handleDeletePost}
+            onImageClick={handleOpenImageModal}
+          />
+          <EditProfileModal
+            isOpen={isEditProfileModalOpen}
+            onClose={() => setIsEditProfileModalOpen(false)}
+            profileData={profileData}
+            onSave={handleProfileUpdate}
+          />
+          <NewPostDialog
+            isOpen={isNewPostDialogOpen}
+            onClose={() => setIsNewPostDialogOpen(false)}
+            onAddPost={handleAddPost}
+          />
+          <ImageModalViewer
+            isOpen={isImageModalViewerOpen}
+            onClose={handleCloseImageModal}
+            image={selectedImage}
+          />
+        </main>
+        <Footer />
       </div>
     </>
   );
+  );
 }
 
+export default App;
 export default App;
