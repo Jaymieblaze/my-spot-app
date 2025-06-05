@@ -60,10 +60,6 @@ function App() {
     setIsNewPostDialogOpen(false);
   };
 
-  const handleDeletePost = (idToDelete) => {
-    setPosts(prevPosts => prevPosts.filter(post => post.id !== idToDelete));
-  };
-
   const handleOpenImageModal = (imageSrc, imageCaption) => {
     setSelectedImage({ src: imageSrc, caption: imageCaption });
     setIsImageModalViewerOpen(true);
@@ -86,7 +82,6 @@ function App() {
           />
           <PostSection
             posts={posts}
-            onDeletePost={handleDeletePost}
             onImageClick={handleOpenImageModal}
           />
           <EditProfileModal
